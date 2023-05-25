@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>كابتن معلق</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="../vendors/typicons.font/font/typicons.css">
+    <link rel="stylesheet" href="../vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../vendors/DataTables/datatables.css">
+    <link rel="stylesheet" href="../vendors/venbox/1.9.3.venobox.css">
+    <link rel="stylesheet" href="../assets/css/vertical-layout-light/style.css">
+    <link rel="shortcut icon" href="../assets/images/icon.png" />
+</head>
+
+<body>
+    <div class="container-scroller">
+        <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="text-center navbar-brand-wrapper">
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+                    data-toggle="offcanvas">
+                    <i class="fi fi-rr-menu-burger"></i>
+                </button>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item nav-profile dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+                            <i class="fi fi-rr-circle-user"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                            aria-labelledby="profileDropdown">
+                            <a class="dropdown-item" href="../pages/adminProfile.html">
+                                <i class="fi fi-rr-user"></i>
+                                الادمن
+                            </a>
+                            <a class="dropdown-item" href="../pages/login.html">
+                                <i class="fi fi-rr-power"></i>
+                                تسجيل الخروج
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item nav-profile dropdown">
+                        <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center"
+                            id="notificationDropdown" href="#" data-toggle="dropdown">
+                            <i class="fi fi-rr-bell"></i>
+                            <span class="count bg-danger"></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                            aria-labelledby="notificationDropdown">
+                            <div class="d-flex justify-content-between dropdown-header">
+                                <strong class="mb-0 font-weight-bold">التنبيهات</strong>
+                                <a class="text-secondary">تحديد الكل كمقروء</a>
+                            </div>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-item-content">
+                                    <h5 class="preview-subject mb-0">يارا محمد</h5>
+                                    <p class="mb-0">ارسال بلاغ</p>
+                                </div>
+                                <p class="text-small"> منذ 5 دقائق </p>
+                            </a>
+
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-item-content">
+                                    <h5 class="preview-subject mb-0">يارا محمد</h5>
+                                    <p class="mb-0">ارسال بلاغ</p>
+                                </div>
+                                <p class="text-small"> منذ 5 دقائق </p>
+                            </a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container-fluid page-body-wrapper">
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <div class="d-flex sidebar-profile logo justify-content-between">
+                            <img src="../assets/images/OnMyWay-logo-white.png">
+                            <button class="navbar-toggler navbar-toggler align-self-center d-none d-lg-flex"
+                                type="button" data-toggle="minimize">
+                                <i class="fi fi-rr-angle-double-small-right"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            <i class="fi fi-rr-house-blank menu-icon"></i>
+                            <span class="menu-title">
+                                لوحة التحكم
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../captins.html">
+                            <i class="fi fi-rr-car-alt menu-icon"></i>
+                            <span class="menu-title">
+                                الكباتن
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../passengers.html">
+                            <i class="fi fi-rr-user menu-icon"></i>
+                            <span class="menu-title">
+                                الركاب
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../activeTrips.html">
+                            <img src="../assets/images/trips-icon.png" class="menu-icon">
+                            <span class="menu-title">
+                                الرحلات الجارية
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../payment.html">
+                            <i class="fi fi-rr-credit-card menu-icon"></i>
+                            <span class="menu-title">
+                                طلبات المبالغ
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../reports.html">
+                            <i class="fi fi-rr-hand-paper menu-icon"></i>
+                            <span class="menu-title">
+                                البلاغات
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">
+                            <i class="fi fi-rr-phone-flip menu-icon"></i>
+                            <span class="menu-title">
+                                اتصل بنا
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../codes.html">
+                            <i class="fi fi-rr-badge-percent menu-icon"></i>
+                            <span class="menu-title">
+                                الاكواد
+                            </span>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    <div class="row align-items-center pr-3">
+                        <button onclick="history.back()" class="back-btn">
+                            <i class="fi fi-rr-angle-right"></i>
+                        </button>
+                        <h1 class="main-title w-all">محمد أحمد العبدالله</h1>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-12 d-flex grid-margin">
+                            <div class="card w-100">
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        الأسم
+                                                    </th>
+                                                    <th>
+                                                        الرقم
+                                                    </th>
+                                                    <th>
+                                                        الحالة
+                                                    </th>
+                                                    <th>
+                                                        الموظف
+                                                    </th>
+                                                    <th>
+                                                        التاريخ
+                                                    </th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        محمد خالد العبدالله
+                                                    </td>
+                                                    <td>
+                                                        +966 55601 3099
+                                                    </td>
+                                                    <td>
+                                                        <span class="status badge-warning">
+                                                            معلق
+                                                        </span>
+                                                    </td>
+
+                                                    <td>
+                                                        mohamad m
+                                                    </td>
+                                                    <td>
+                                                        2023-01-12
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-auto secondary-title">
+                            <h2 class="card-title">البيانات الشخصيه</h2>
+                            <div class="d-flex gap-10">
+                                <a href="#" class="text-secondary">تعديل</a>
+                                <i class="fi fi-rr-angle-down"></i>
+                            </div>
+                        </div>
+
+                        <div class="w-100 row">
+                            <div class="col-md-4 col-sm-4 col-6">
+                                <div class="d-flex gap-6">
+                                    <div class="rounded-img">
+                                        <img src="../assets/images/Ellipse 9.png">
+                                    </div>
+                                    <ul class="list-unstyled capPersonalData">
+                                        <li> محمد خالد العبدالله</li>
+                                        <li class="d-flex">
+                                            ذكر
+                                            <i class="fi fi-rr-mars"></i>
+                                        </li>
+                                        <li> 29 سنة</li>
+                                        <li>
+                                            سعودي الجنسية
+                                        </li>
+                                    </ul>
+                                </div>
+                                <ul class="list-unstyled capPersonalData">
+                                    <li class="text-secondary">xxxxxxxx@gmail.com</li>
+                                    <li class="text-secondary">+966 55601 3099 </li>
+                                    <li>
+                                        <div class="CapAddress">
+                                            <p>
+                                                طريق بدون اسم، مطار الملك خالد الدولـ...
+                                            </p>
+                                            <a href="#" class="text-secondary">موقع</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-6">
+                                <p>
+                                    0000000000
+                                </p>
+                                <div class="rect-img">
+                                    <a class="venobox" href="../assets/images/Rectangle 37.png" data-gall="">
+                                        <img src="../assets/images/Rectangle 37.png">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-sm-4 col-6">
+                                <p class="font-weight-bold">
+                                    البيانات البنكية
+                                </p>
+                                <ul class="list-unstyled capPersonalData">
+                                    <li>محمد أحمد العبدالله</li>
+                                    <li>بنك الراجحي</li>
+                                    <li>
+                                        SA 00000 0000 0000 0000 0000
+                                    </li>
+                                </ul>
+                                <div class="rect-img">
+                                    <a class="venobox" href="../assets/images/Rectangle 39.png" data-gall="">
+                                        <img src="../assets/images/Rectangle 39.png">
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-auto secondary-title">
+                            <h2 class="card-title">بيانات السيارة</h2>
+                            <div class="d-flex gap-10">
+                                <a href="#" class="text-secondary">تعديل</a>
+                                <i class="fi fi-rr-angle-down"></i>
+                            </div>
+                        </div>
+
+                        <div class="w-100 row">
+                            <div class="col-md-3 col-sm-4 col-6 d-flex gap-6">
+                                <div class="rect-img">
+                                    <a class="venobox" href="../assets/images/Rectangle 33.png" data-gall="">
+                                        <img src="../assets/images/Rectangle 33.png">
+                                    </a>
+                                </div>
+                                <ul class="list-unstyled capPersonalData">
+                                    <li>سوناتا</li>
+                                    <li>
+                                        2023
+                                    </li>
+                                    <li> 7653 TNJ</li>
+                                    <li>
+                                        تسع 5 اشخاص
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-3 col-sm-4 col-6">
+                                <div class="rect-img">
+                                    <a class="venobox" href="../assets/images/Rectangle 21.png" data-gall="">
+                                        <img src="../assets/images/Rectangle 21.png">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-4 col-6">
+                                <div class="rect-img">
+                                    <a class="venobox" href="../assets/images/Rectangle 23.png" data-gall="">
+                                        <img src="../assets/images/Rectangle 23.png">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-4 col-6">
+                                <div class="rect-img">
+                                    <a class="venobox" href="../assets/images/Rectangle 25.png" data-gall="">
+                                        <img src="../assets/images/Rectangle 25.png">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-auto secondary-title">
+                            <h2 class="card-title">بيانات دوامه/دراسته/وجهته النهائيه</h2>
+                        </div>
+
+                        <div class="col-lg-12 d-flex grid-margin">
+                            <div class="timeDate">
+                                <div class="days">
+                                    <p class="badge badge-solid-primary">
+                                        الأحد
+                                    </p>
+                                    <p class="badge badge-solid-primary">
+                                        الأحد
+                                    </p>
+                                    <p class="badge badge-solid-primary">
+                                        الأحد
+                                    </p>
+                                    <p class="badge badge-solid-primary">
+                                        الأحد
+                                    </p>
+                                </div>
+                                <p>
+                                    من 9:00 صباحاً حتى 6:00 مساءً
+                                </p>
+                            </div>
+                            <div class="CapAddress">
+                                <p>
+                                    طريق بدون اسم، مطار الملك خالد الدولـ...
+                                </p>
+                                <a href="#" class="text-secondary">موقع</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-auto secondary-title">
+                            <h2 class="card-title">الملاحظات</h2>
+                        </div>
+
+                        <div class="col-lg-12 d-flex grid-margin">
+                            <div class="table-responsive">
+                                <table class="table dtBasicExample" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                الملاحظه
+                                            </th>
+                                            <th>
+                                                الحالة
+                                            </th>
+                                            <th>
+                                                التاريخ
+                                            </th>
+                                            <th>
+                                                الموظف
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="notes">
+                                                    <p>
+                                                        لم يتم تفعيل عضويته بسبب اختلاف اسمه الكامل عن الاسم بالهوية
+                                                        الوطنيه + الايبان
+                                                    </p>
+                                                    <a class="viewMore text-secondary">المزيد</a>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="status badge-warning">
+                                                    معلق
+                                                </span>
+                                            </td>
+                                            <td>
+                                                2023-01-11
+                                            </td>
+                                            <td>
+                                                mohamad m
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="col-12 d-flex btns mb-3">
+                            <button type="submit" class="btn btn-success" data-toggle="modal"
+                                data-target="#capHold-modal">التعامل مع عضوية الكابتن</button>
+                            <button class="btn btn-light-danger">خروج</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="capHold-modal" tabindex="-1" aria-labelledby="capHold-modaltitle"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title" id="capHold-modaltitle">كابتن قيد الانتظار</h1>
+                            </div>
+                            <div class="modal-body">
+                                <h5>الإجراءات</h5>
+                                <ul class="nav nav-pills">
+                                    <li class="nav-item">
+                                        <a class="nav-link success" href="#">قبول</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active warning" href="#">تعليق</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link danger" href="#">رفض</a>
+                                    </li>
+                                </ul>
+                                <h5>السبب</h5>
+                                <textarea rows="5"
+                                    class="form-control">كتابة ملاحظة مُفصلة عن سبب اختيار هذا الاجراء</textarea>
+                                <div class="d-flex justify-content-end">
+                                    <p class="text-gray">تم كتابة هذه الملاحظه من قبل Mohamad m</p>
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-lg text-success" data-dismiss="modal">متأكد من
+                                    الاجراء</button>
+                                <button type="button" class="btn btn-lg text-danger" data-dismiss="modal">خروج</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <footer class="footer">
+                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                        <span class="text-center text-sm-left d-block d-sm-inline-block">
+                            ©
+                            جميع الحقوق محفوظة لـ
+                            <a href="https://softwarecloud2.com/" target="_blank">softwarecloud2.com</a>
+                            <P> 2023</P>
+                        </span>
+                    </div>
+                </footer>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+    <script src="../vendors/js/vendor.bundle.base.js"></script>
+    <script src="../assets/js/off-canvas.js"></script>
+    <script src="../assets/js/hoverable-collapse.js"></script>
+    <script src="../assets/js/template.js"></script>
+    <script src="../assets/js/settings.js"></script>
+    <script src="../assets/js/todolist.js"></script>
+    <script src="../vendors/DataTables/datatables.min.js"></script>
+    <script src="../vendors/progressbar.js/progressbar.min.js"></script>
+    <script src="../vendors/venbox/1.9.3.venobox.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+</body>
+
+</html>

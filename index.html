@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Fi Tariki- Dashboard</title>
+  <link rel="stylesheet" href="vendors/typicons.font/font/typicons.css">
+
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="assets/css/vertical-layout-light/style.css">
+  <link rel="shortcut icon" href="assets/images/icon.png" />
+</head>
+
+<body>
+  <div class="container-scroller">
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper">
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+          data-toggle="offcanvas">
+          <i class="fi fi-rr-menu-burger"></i>
+        </button>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <ul class="navbar-nav">
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <i class="fi fi-rr-circle-user"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="pages/adminProfile.html">
+                <i class="fi fi-rr-user"></i>
+                الادمن
+              </a>
+              <a class="dropdown-item" href="pages/login.html">
+                <i class="fi fi-rr-power"></i>
+                تسجيل الخروج
+              </a>
+            </div>
+          </li>
+
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center"
+              id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="fi fi-rr-bell"></i>
+              <span class="count bg-danger"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+              aria-labelledby="notificationDropdown">
+              <div class="d-flex justify-content-between dropdown-header">
+                <strong class="mb-0 font-weight-bold">التنبيهات</strong>
+                <a class="text-secondary">تحديد الكل كمقروء</a>
+              </div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-item-content">
+                  <h5 class="preview-subject mb-0">يارا محمد</h5>
+                  <p class="mb-0">ارسال بلاغ</p>
+                </div>
+                <p class="text-small"> منذ 5 دقائق </p>
+              </a>
+
+              <a class="dropdown-item preview-item">
+                <div class="preview-item-content">
+                  <h5 class="preview-subject mb-0">يارا محمد</h5>
+                  <p class="mb-0">ارسال بلاغ</p>
+                </div>
+                <p class="text-small"> منذ 5 دقائق </p>
+              </a>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid page-body-wrapper">
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <div class="d-flex sidebar-profile logo justify-content-between">
+              <img src="assets/images/OnMyWay-logo-white.png">
+              <button class="navbar-toggler navbar-toggler align-self-center d-none d-lg-flex" type="button"
+                data-toggle="minimize">
+                <i class="fi fi-rr-angle-double-small-right"></i>
+              </button>
+            </div>
+
+            <!-- <div class="nav-search">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Type to search..." aria-label="search"
+                  aria-describedby="search">
+                <div class="input-group-append">
+                  <span class="input-group-text" id="search">
+                    <i class="typcn typcn-zoom"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+           -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="fi fi-rr-house-blank menu-icon"></i>
+              <span class="menu-title">
+                لوحة التحكم
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="captins.html">
+              <i class="fi fi-rr-car-alt menu-icon"></i>
+              <span class="menu-title">
+                الكباتن
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="passengers.html">
+              <i class="fi fi-rr-user menu-icon"></i>
+              <span class="menu-title">
+                الركاب
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="activeTrips.html">
+              <img src="assets/images/trips-icon.png" class="menu-icon">
+              <span class="menu-title">
+                الرحلات الجارية
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="payment.html">
+              <i class="fi fi-rr-credit-card menu-icon"></i>
+              <span class="menu-title">
+                طلبات المبالغ
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="reports.html">
+              <i class="fi fi-rr-hand-paper menu-icon"></i>
+              <span class="menu-title">
+                البلاغات
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">
+              <i class="fi fi-rr-phone-flip menu-icon"></i>
+              <span class="menu-title">
+                اتصل بنا
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="codes.html">
+              <i class="fi fi-rr-badge-percent menu-icon"></i>
+              <span class="menu-title">
+                الاكواد
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row align-items-center pr-3">
+            <button onclick="history.back()" class="back-btn">
+              <i class="fi fi-rr-angle-right"></i>
+            </button>
+            <h1 class="main-title">لوحة التحكم</h1>
+            <div class="dropdown ml-auto">
+              <button class="btn bg-black btn-sm dropdown-toggle btn-icon-text" type="button" id="dropdownMenu3"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                اليوم
+                17-5-2023
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3" data-x-placement="top-start">
+                <a class="dropdown-item" href="#"> 16-5-2023</a>
+                <a class="dropdown-item" href="#"> 15-5-2023</a>
+                <a class="dropdown-item" href="#"> 14-5-2023</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-3">
+            <div class="col-12">
+              <h2 class="card-title">الكباتن</h2>
+            </div>
+
+            <div class="col-auto d-flex grid-margin">
+              <div class="card">
+                <div class="card-body">
+                  <div id="circleProgress1" class="progressbar-js-circle">
+                    <img src="assets/images/car.png">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-auto d-flex grid-margin">
+              <div class="card flex-row">
+                <div class="card-body justify-content-start">
+                  <div id="circleProgress2" class="progressbar-js-circle nationality">
+                    <img src="assets/images/global.png">
+                  </div>
+
+                </div>
+                <div class="card-body justify-content-start">
+                  <ul class="chart-results">
+                    <li>
+                      يمني
+                    </li>
+                    <li>
+                      سوري
+                    </li>
+                    <li>
+                      مصري
+                    </li>
+                    <li>
+                      سوداني
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-auto d-flex grid-margin">
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="rate">
+                    <img src="assets/images/star.png">
+                    <h1>
+                      4
+                    </h1>
+                  </div>
+                  <h2 class="font-weight-normal">الأكثر تقييماً</h2>
+                  <table class="table-borderless mt-4">
+                    <tbody>
+                      <tr>
+                        <td class="text-secondary">
+                          <a href="#">
+                            محمد أحمد العبدالله
+                          </a>
+                        </td>
+                        <td class="d-flex align-items-center gap-4">
+                          <i class="fi fi-rr-badge maroon"></i>
+                          <p>
+                            5 رحلات مكتمله
+                          </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-secondary">
+                          <a href="#">
+                            فاطمة عبدالله الفلان
+                          </a>
+                        </td>
+                        <td class="d-flex align-items-center gap-4">
+                          <i class="fi fi-rr-badge maroon"></i>
+                          <p>
+                            5 رحلات مكتمله
+                          </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-secondary">
+                          <a href="#">
+                            أنس احمد الفلان
+                          </a>
+                        </td>
+                        <td class="d-flex align-items-center gap-4">
+                          <i class="fi fi-rr-badge maroon"></i>
+                          <p>
+                            5 رحلات مكتمله
+                          </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-auto d-flex grid-margin">
+              <div class="card w-100">
+                <div class="card-body gap-10 align-items-center justify-content-center">
+                  <img src="assets/images/car.png" class="w-75">
+                  <h1 class="red">
+                    4
+                  </h1>
+                  <h2>
+                    غير مفعل
+                  </h2>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div class="row mt-3">
+            <div class="col-12">
+              <h2 class="card-title">الركاب</h2>
+            </div>
+
+            <div class="col-auto d-flex grid-margin">
+              <div class="card">
+                <div class="card-body">
+                  <div id="circleProgress3" class="progressbar-js-circle">
+                    <img src="assets/images/car.png">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-auto d-flex grid-margin">
+              <div class="card flex-row">
+                <div class="card-body justify-content-start">
+                  <div id="circleProgress4" class="progressbar-js-circle nationality">
+                    <img src="assets/images/global.png">
+                  </div>
+                </div>
+                <div class="card-body justify-content-start">
+                  <ul class="chart-results">
+                    <li>
+                      يمني
+                    </li>
+                    <li>
+                      سوري
+                    </li>
+                    <li>
+                      مصري
+                    </li>
+                    <li>
+                      سوداني
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-auto d-flex grid-margin">
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="rate">
+                    <img src="assets/images/star.png">
+                    <h1>
+                      4
+                    </h1>
+                  </div>
+                  <h2 class="font-weight-normal">الأكثر تقييماً</h2>
+                  <table class="table-borderless mt-4">
+                    <tbody>
+                      <tr>
+                        <td class="text-secondary">
+                          <a href="#">
+                            محمد أحمد
+                          </a>
+                        </td>
+                        <td class="d-flex align-items-center gap-4">
+                          <i class="fi fi-rr-badge maroon"></i>
+                          <p>
+                            5 رحلات مكتمله
+                          </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-secondary">
+                          <a href="#">
+                            فاطمة الفلان
+                          </a>
+                        </td>
+                        <td class="d-flex align-items-center gap-4">
+                          <i class="fi fi-rr-badge maroon"></i>
+                          <p>
+                            5 رحلات مكتمله
+                          </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-secondary">
+                          <a href="#">
+                            أنس احمد
+                          </a>
+                        </td>
+                        <td class="d-flex align-items-center gap-4">
+                          <i class="fi fi-rr-badge maroon"></i>
+                          <p>
+                            5 رحلات مكتمله
+                          </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row mt-3">
+            <div class="col-12">
+              <h2 class="card-title">الرحلات</h2>
+            </div>
+
+            <div class="col-auto d-flex grid-margin">
+              <div class="card">
+                <div class="card-body">
+                  <img src="assets/images/trips.png" class="w-25">
+                  <table class="trips-table table-borderless mt-4 ">
+                    <tbody>
+                      <tr class="title">
+                        <td>
+                          <span class="box">
+                            45
+                          </span>
+                        </td>
+                        <td>
+                          <h2>
+                            رحلة جارية
+                          </h2>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <span class="box">
+                            20
+                          </span>
+                        </td>
+                        <td>
+                          <p>
+                            عروض توصيل متاحه
+                          </p>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <span class="box">
+                            19
+                          </span>
+                        </td>
+                        <td>
+                          <p>
+                            عروض توصيل متاحه
+                          </p>
+                        </td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-5 d-flex grid-margin">
+              <div class="card w-100">
+                <div class="card-body gap-10 align-items-start justify-content-start">
+                  <img src="assets/images/hand.png" class="w-25">
+                  <h1 class="red">
+                    5
+                  </h1>
+                  <h2>
+                    بلاغات تحتاج الرد
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-center text-sm-left d-block d-sm-inline-block">
+              ©
+              جميع الحقوق محفوظة لـ
+              <a href="https://softwarecloud2.com/" target="_blank">softwarecloud2.com</a>
+              <P> 2023</P>
+            </span>
+          </div>
+        </footer>
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <script src="assets/js/off-canvas.js"></script>
+  <script src="assets/js/hoverable-collapse.js"></script>
+  <script src="assets/js/template.js"></script>
+  <script src="assets/js/settings.js"></script>
+  <script src="assets/js/todolist.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script src="vendors/progressbar.js/progressbar.min.js"></script>
+
+  <script src="assets/js/dashboard.js"></script>
+</body>
+
+</html>
