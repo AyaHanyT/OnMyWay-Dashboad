@@ -5,10 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>الأكواد</title>
-  <link rel="stylesheet" href="vendors/typicons.font/font/typicons.css">
-
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  <link rel="stylesheet" href="vendors/typicons.font/font/typicons.css">
   <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="vendors/DataTables/datatables.css">
+  <link rel="stylesheet" href="vendors/venbox/1.9.3.venobox.css">
   <link rel="stylesheet" href="assets/css/vertical-layout-light/style.css">
   <link rel="shortcut icon" href="assets/images/icon.png" />
 </head>
@@ -192,6 +194,11 @@
               </ul>
               <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="allCodes" role="tabpanel" aria-labelledby="allCodes-tab">
+                  <div class="d-flex justify-content-end">
+                  <a type="button" class="text-secondary" data-toggle="modal" data-target="#code-modal">
+                    إضافة كود جديد
+                  </a>
+                </div>
                   <div class="col-12">
                     <div class="table-responsive">
                       <table class="table dtBasicExample" cellspacing="0">
@@ -334,7 +341,6 @@
                   </div>
                 </div>
                 <div class="tab-pane fade" id="archive" role="tabpanel" aria-labelledby="archive-tab">
-
                   <div class="col-12">
                     <div class="table-responsive">
                       <table class="table dtBasicExample" cellspacing="0">
@@ -437,6 +443,114 @@
 
         </div>
 
+        
+        <div class="modal fade code-modal" id="code-modal" tabindex="-1" aria-labelledby="code-modaltitle"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialoge-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title" id="code-modaltitle">
+                  اضافة كود جديد
+                </h1>
+              </div>
+              <div class="modal-body">
+                <form class="forms-sample w-100">
+                  <div class="form-group">
+                    <label for="exampleInputName1">الكود</label>
+                    <input type="text" class="form-control" id="exampleInputName1" value="Admin">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputpercent">نسبة الخصم</label>
+                    <input type="number" max="100" class="form-control" id="exampleInputpercent" value="50">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail3">صلاحية استخدام الكود لـ</label>
+                    <div class="d-flex">
+                      <div class="col-sm-4 col-6 form-check form-check-flat form-check-primary">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input">
+                          جميع المستخدمين
+                          <i class="input-helper"></i></label>
+                      </div>
+                      <div class="col-sm-4 col-6 form-check form-check-flat form-check-primary">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input">
+                          المستخدمين أول مره
+                          <i class="input-helper"></i></label>
+                      </div>
+                    </div>
+                    <p>أو ادخل أسم المستحدم</p>
+                    <input type="text" class="form-control" id="exampleInputName" value="الاسم">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword4">
+                      نوع الكود
+                      <small class="text-gray">
+                        * في حال وضع (0) سيكون عدد غير محدد
+                      </small>
+                    </label>
+                    <input type="number" class="form-control" id="exampleInputtype" value="0">
+                  </div>
+                  <div class="form-group">
+                    <div class="d-flex justify-content-between align-items-center">
+                      الكود خاص ب
+                      <div class="custom-switch">
+                        <a id="captin-switch">
+                          <i class="fi fi-rr-car-alt"></i>
+                          كابتن
+                        </a>
+                        <a class="passenger-switch" id="passenger-switch">
+                          <i class="fi fi-rr-user"></i>
+                          راكب
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="d-flex justify-content-between align-items-center">
+                      حالة الكود
+                      <div class="custom-switch activiation">
+                        <a id="captin-switch">
+                          مفعل
+                        </a>
+                        <a class="passenger-switch" id="passenger-switch">
+                          غير مفعل
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="endDate">
+                      تاريخ الانتهاء 
+                      <small class="text-gray">
+                        * اختياري
+                      </small>
+                    </label>
+                    <input type="date" class="form-control" id="endDate" name="endDate">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="endDate">
+                    ملاحظة
+                      <small class="text-gray">
+                        * اختياري
+                      </small>
+                    </label>
+                    <textarea rows="3" class="form-control"></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">حفظ التغيرات</button>
+                </form>
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-lg text-success" data-dismiss="modal">حسناً</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
         <footer class="footer">
           <div class="d-sm-flex justify-content-center justify-content-sm-between">
             <span class="text-center text-sm-left d-block d-sm-inline-block">
@@ -461,10 +575,9 @@
   <script src="assets/js/template.js"></script>
   <script src="assets/js/settings.js"></script>
   <script src="assets/js/todolist.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+  <script src="vendors/DataTables/datatables.js"></script>
   <script src="vendors/progressbar.js/progressbar.min.js"></script>
-
+  <script src="vendors/venbox/1.9.3.venobox.js"></script>
   <script src="assets/js/dashboard.js"></script>
 </body>
 
