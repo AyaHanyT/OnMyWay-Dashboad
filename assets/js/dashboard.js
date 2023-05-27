@@ -205,14 +205,13 @@ if ($('.auth').length) {
 }
 
 $(document).ready(function () {
-  $('.dtBasicExample').DataTable();
-  $('.dataTables_length').addClass('bs-select');
-});
-
-$('.dtBasicExample').DataTable( {
+  $('.dtBasicExample').DataTable( {
     ordering: false,
     responsive: true
 } );
+  $('.dataTables_length').addClass('bs-select');
+});
+
 
 $('.remove-row').click(function () {
   $(this).parents('tr').remove();
